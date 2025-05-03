@@ -775,34 +775,38 @@
 
         // Script Counter
 
-        // function formatAbbreviation(value) {
-        //     if (value >= 1 _000_000) return (value / 1 _000_000).toFixed(1) + 'M';
-        //     if (value >= 1 _000) return (value / 1 _000).toFixed(1) + 'k';
-        //     return value.toString();
-        // }
+        function formatAbbreviation(value) {
+    const rounded = Math.round(value);
+    if (rounded >= 1_000_000) return (rounded / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+    if (rounded >= 1_000) return (rounded / 1_000).toFixed(1).replace(/\.0$/, '') + 'k';
+    return rounded.toString();
+}
 
-        // function animateCounters() {
-        //     const counters = document.querySelectorAll('.counter');
-        //     counters.forEach(counter => {
-        //         const target = +counter.getAttribute('data-count');
-        //         let start = 0;
-        //         const duration = 2000; // in ms
-        //         const stepTime = 30;
-        //         const steps = Math.ceil(duration / stepTime);
-        //         const increment = target / steps;
+function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
 
-        //         const interval = setInterval(() => {
-        //             start += increment;
-        //             if (start >= target) {
-        //                 start = target;
-        //                 clearInterval(interval);
-        //             }
-        //             counter.innerText = formatAbbreviation(start);
-        //         }, stepTime);
-        //     });
-        // }
+    counters.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-count'));
+        let current = 0;
+        const duration = 2000; // total time in ms
+        const stepTime = 30; // interval time in ms
+        const steps = Math.ceil(duration / stepTime);
+        const increment = target / steps;
 
-        // window.addEventListener('load', animateCounters);
+        const updateCounter = () => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            counter.textContent = formatAbbreviation(current);
+        };
+
+        const timer = setInterval(updateCounter, stepTime);
+    });
+}
+
+window.addEventListener('load', animateCounters);
     </script>
 
 
