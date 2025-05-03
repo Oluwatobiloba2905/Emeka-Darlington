@@ -410,3 +410,11 @@ function moveSlide(direction, trackId) {
 
     track.style.transform = `translateX(-${slideIndex[trackId] * 100}%)`;
 }
+
+
+window.addEventListener('load', () => {
+    const loader = document.getElementById('pageLoader');
+    if (loader) {
+        loader.style.display = 'none';
+    }
+});
