@@ -418,3 +418,28 @@ window.addEventListener('load', () => {
         loader.style.display = 'none';
     }
 });
+
+
+
+const emkButtons = document.querySelectorAll(".emk-btn");
+const emkItems = document.querySelectorAll(".emk-item");
+
+// Hide all on load
+emkItems.forEach(item => item.classList.add("emk-hide"));
+
+emkButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        emkButtons.forEach(b => b.classList.remove("emk-active"));
+        btn.classList.add("emk-active");
+
+        const filter = btn.getAttribute("data-emk");
+
+        emkItems.forEach(item => {
+            if (item.classList.contains(filter)) {
+                item.classList.remove("emk-hide");
+            } else {
+                item.classList.add("emk-hide");
+            }
+        });
+    });
+});
