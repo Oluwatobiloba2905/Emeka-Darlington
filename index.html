@@ -57,12 +57,21 @@
 
             <ul class="nav-menu list-unstyled">
                 <li><a href="#header" class="smoothScroll">Home</a></li>
-                <li><a href="#about" class="smoothScroll">About</a></li>
+
+                <li class="dropdown">
+                    <a href="#about" class="smoothScroll">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#team" class="smoothScroll">Our Team</a></li>
+                        <li><a href="#mission" class="smoothScroll">Our Mission</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="#Gallery" class="smoothScroll">Gallery</a></li>
                 <li><a href="#Projects" class="smoothScroll">Projects</a></li>
                 <li><a href="#journal" class="smoothScroll">Press</a></li>
                 <li><a href="#contact" class="smoothScroll">Contact</a></li>
             </ul>
+
         </div>
     </nav>
 
@@ -70,7 +79,7 @@
 
 
     <!-- Header Section -->
-    <div id="header" class="home">
+    <section id="header" class="home">
         <div class="container">
             <div class="header-content text-center">
                 <h1>Emeka Darlington</h1>
@@ -113,13 +122,13 @@
             <a href="https://www.youtube.com/@emekadarlingtontv"><img src="images/Social icons/Youtube.png"
                     alt="Youtube"></a>
         </div>
-    </div>
+    </section>
 
 
-
+    <!-- Header Section End -->
 
     <!-- About Section -->
-    <div id="about" class="paddsection">
+    <section id="about" class="paddsection">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-4">
@@ -157,10 +166,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Collaborations Section -->
-    <div id="services">
+    <section id="services">
         <div class="container">
             <div class="section-title text-center">
                 <h2 class="emk-title">Collaborations</h2>
@@ -227,19 +236,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
-
-
-
-
-
+    <!-- Acheivement Section -->
 
     <div id="services">
         <div class="container">
             <div class="section-title text-center">
-                <h2 class="emk-title">achievement</h2>
+                <h2 class="emk-title">Achievement</h2>
             </div>
             <div class="services-carousel owl-theme">
                 <div class="services-block">
@@ -298,9 +303,9 @@
             </div>
         </div>
     </div>
+    <!-- Acheivement Section End -->
 
-    <!-- Start Section: Portfolio -->
-
+    <!-- Start Section: Gallery -->
     <section id="Gallery" class="emk-gallery-zone">
         <div class="emk-container">
             <h2 class="emk-title">Gallery</h2>
@@ -378,9 +383,9 @@
     <!-- Start Section: Projects -->
     <section id="Projects">
         <!-- <div class="container"> -->
-            <div class="section-title text-center">
-                <h2 class="emk-title">Projects</h2>
-            </div>
+        <div class="section-title text-center">
+            <h2 class="emk-title">Projects</h2>
+        </div>
         <!-- </div> -->
 
         <div class="box-swiper">
@@ -611,7 +616,7 @@
 
 
     <!-- start section journal -->
-    <div id="journal" class="text-left paddsection">
+    <section id="journal" class="text-left paddsection">
         <div class="container">
             <div class="section-title text-center">
                 <h2 class="emk-title">Press Mentions</h2>
@@ -674,15 +679,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- End section journal -->
 
 
+    <!-- Contact Section -->
+    <section id="contact" class="contacts-section">
+        <div class="section-title text-center">
+            <h2 class="emk-title">Contact</h2>
 
-    <div class="section-title text-center">
-        <h2 class="emk-title">Contact</h2>
 
-        <section id="contact" class="contacts-section">
 
 
             <div class="flex-container">
@@ -772,110 +778,113 @@
                     <p><strong>+234 806237316</strong></p>
                 </a>
             </div>
-        </section>
+    </section>
+    <!-- Contact Section End-->
 
 
+    <!-- start section footer -->
+    <section id="footer" class="text-center">
+        <div class="container">
 
+            <p>&copy; Copyrights <span>Emeka Darlington</span></a> All rights
+                reserved.
+            </p>
 
-
-        <!-- start section footer -->
-        <div id="footer" class="text-center">
-            <div class="container">
-
-                <p>&copy; Copyrights <span>Emeka Darlington</span></a> All rights
-                    reserved.
-                </p>
-
-                <div class="credits">Designed by <a href="https://bit.ly/ATobias">Tobias</a></div>
-            </div>
+            <div class="credits">Designed by <a href="https://bit.ly/ATobias">Tobias</a></div>
         </div>
-        <!-- End section footer -->
-
-        <!-- JavaScript Libraries -->
-        <script src="lib/jquery/jquery.min.js"></script>
-        <script src="lib/jquery/jquery-migrate.min.js"></script>
-        <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/typed/typed.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-
-        <!-- Contact Form JavaScript File -->
-        <script src="contactform/contactform.js"></script>
-
-        <!-- Template Main Javascript File -->
-        <script src="js/main.js"></script>
-        <!-- <script src="script.js"></script> -->
+    </section>
+    <!-- End section footer -->
 
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
-            const swiper = new Swiper('.grid', {
-                slidesPerView: 1.2,
-                spaceBetween: 20,
-                loop: true,
-                grabCursor: true,
-                pagination: {
-                    el: '.pagination',
-                    clickable: true,
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+    <!-- <script src="script.js"></script> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.grid', {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true,
+            pagination: {
+                el: '.pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2.2,
                 },
-                navigation: {
-                    nextEl: '.next',
-                    prevEl: '.prev',
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 2.2,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                    }
-                },
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-            });
+                1024: {
+                    slidesPerView: 3,
+                }
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
 
 
 
 
 
-            // Script Counter
+        // Script Counter
 
-            function formatAbbreviation(value) {
-    const rounded = Math.round(value);
-    if (rounded >= 1_000_000) return (rounded / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
-    if (rounded >= 1_000) return (rounded / 1_000).toFixed(1).replace(/\.0$/, '') + 'k';
-    return rounded.toString();
-}
+        //             function formatAbbreviation(value) {
+        //     const rounded = Math.round(value);
+        //     if (rounded >= 1_000_000) return (rounded / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+        //     if (rounded >= 1_000) return (rounded / 1_000).toFixed(1).replace(/\.0$/, '') + 'k';
+        //     return rounded.toString();
+        // }
 
-function animateCounters() {
-    const counters = document.querySelectorAll('.counter');
+        // function animateCounters() {
+        //     const counters = document.querySelectorAll('.counter');
 
-    counters.forEach(counter => {
-        const target = parseFloat(counter.getAttribute('data-count'));
-        let current = 0;
-        const duration = 2000; // total time in ms
-        const stepTime = 30; // interval time in ms
-        const steps = Math.ceil(duration / stepTime);
-        const increment = target / steps;
+        //     counters.forEach(counter => {
+        //         const target = parseFloat(counter.getAttribute('data-count'));
+        //         let current = 0;
+        //         const duration = 2000; // total time in ms
+        //         const stepTime = 30; // interval time in ms
+        //         const steps = Math.ceil(duration / stepTime);
+        //         const increment = target / steps;
 
-        const updateCounter = () => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
-            }
-            counter.textContent = formatAbbreviation(current);
-        };
+        //         const updateCounter = () => {
+        //             current += increment;
+        //             if (current >= target) {
+        //                 current = target;
+        //                 clearInterval(timer);
+        //             }
+        //             counter.textContent = formatAbbreviation(current);
+        //         };
 
-        const timer = setInterval(updateCounter, stepTime);
-    });
-}
+        //         const timer = setInterval(updateCounter, stepTime);
+        //     });
+        // }
 
-window.addEventListener('load', animateCounters);
-        </script>
+        // window.addEventListener('load', animateCounters);
+    </script>
 
 
 
