@@ -252,7 +252,7 @@ $(document).ready(function () {
 
     $(function () {
         typed.typed({
-            strings: ["Actor.", "Model", "Content Creator", "Entertainer."],
+            strings: ["An actor.", "A model", "A content Creator", "An entertainer."],
             typeSpeed: 100,
             loop: true
         });
