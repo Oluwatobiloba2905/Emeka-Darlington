@@ -443,3 +443,37 @@ emkButtons.forEach(btn => {
         });
     });
 });
+
+
+function formatAbbreviation(value) {
+    const rounded = Math.round(value);
+    if (rounded >= 1_000_000) return (rounded / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+    if (rounded >= 1_000) return (rounded / 1_000).toFixed(1).replace(/\.0$/, '') + 'k';
+    return rounded.toString();
+}
+
+function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-count'));
+        let current = 0;
+        const duration = 2000; // total time in ms
+        const stepTime = 30; // interval time in ms
+        const steps = Math.ceil(duration / stepTime);
+        const increment = target / steps;
+
+        const updateCounter = () => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            counter.textContent = formatAbbreviation(current);
+        };
+
+        const timer = setInterval(updateCounter, stepTime);
+    });
+}
+
+window.addEventListener('load', animateCounters);
